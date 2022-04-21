@@ -9,4 +9,6 @@ t : play with the Terminal""")
     quit()
 
 if __name__ == "__main__":
+    t = Terminal()
+    t.run()
     pass
