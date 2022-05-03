@@ -11,7 +11,7 @@ t : play with the Terminal""")
 # changed comment here
 if __name__ == "__main__":
     if len(argv) != 2:
-        ui = Terminal()
+        ui = Gui()
         #usage()
     elif argv[1] == "t":
         ui = Terminal()
