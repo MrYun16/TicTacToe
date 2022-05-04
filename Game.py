@@ -27,12 +27,16 @@ class Game:
     def play(self,row,col):
         row -= 1 # to zero base
         col -= 1
-        if self.board[row][col] != Game.EMPTY:
+        if self.__board[row][col] != Game.EMPTY:
             raise GameError("Cannot play here")
-        self.board[row][col] = self.__player
+        self.__board[row][col] = self.__player
         self.__player = Game.P2 if self.__player == Game.P1 else Game.P1
         
-
+    def at(self,row,col):
+        row -= 1 # revert back to zero base
+        col -= 1
+        return self.__board[row][col]
+        
     @property
     def winner(self):
         for p in Game.P1, Game.P2:
