@@ -50,7 +50,7 @@ class Game:
                 return p
             if all(self.__board[2 - i][i] == p for i in range(3)):
                 return p
-        if not any(self.board[row][col] == Game.EMPTY for row, col in product(range(3))):
+        if not any(self.__board[row][col] == Game.EMPTY for row, col in product(range(3), range(3))):
             return Game.DRAW
         return None
 
